@@ -1,4 +1,4 @@
-name: Generate Ascii Art
+name: Site Cat LGTM
 on:
   issue_comment:
     types: [created]
@@ -8,7 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: mscoutermarsh/ascii-art-action@master
+      - uses: redshoga/site-cat-action@1.0
         with:
-          text: 'LGTM'
-
+          token: ${{ secrets.LGTM_TOKEN }}
